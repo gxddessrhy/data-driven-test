@@ -9,10 +9,12 @@ test.describe('Data Driven Tests', () => {
 
       await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
 
-      await page.fill('input[name="username"]', 'admin');
-      await page.fill('input[name="password"]', 'password123');
+      await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
 
-      await page.click('button[type="submit"]');
+await page.getByRole('textbox').first().fill('admin');
+await page.getByRole('textbox').last().fill('password123');
+
+await page.getByRole('button', { name: /login|sign in/i }).click();
 
       await page.click(`text=${data.board}`);
 
