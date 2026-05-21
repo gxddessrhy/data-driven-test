@@ -9,23 +9,18 @@ test.describe('Data Driven Tests', () => {
 
       await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
 
-      // IMPORTANT: wait for page to fully render
-      await page.waitForLoadState('networkidle');
+      // WAIT for page to fully load
+      await page.waitForTimeout(3000);
 
-      // wait for inputs to exist BEFORE interacting
+      // SAFE LOGIN (NO OLD SELECTORS)
       const inputs = page.locator('input');
-      await inputs.first().waitFor({ state: 'visible' });
-
-      // login (safe version)
       await inputs.first().fill('admin');
       await inputs.nth(1).fill('password123');
 
       await page.locator('button').first().click();
 
-      // wait for app to load after login
       await page.waitForTimeout(2000);
 
-      // navigation + checks
       await page.click(`text=${data.board}`);
 
       const column = page.locator(`text=${data.column}`).locator('..');
