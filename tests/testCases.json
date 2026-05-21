@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Test Case 1",
+    "board": "Web Application",
+    "task": "Implement user authentication",
+    "column": "To Do",
+    "tags": ["Feature", "High Priority"]
+  },
+  {
+    "name": "Test Case 2",
+    "board": "Web Application",
+    "task": "Fix navigation bug",
+    "column": "To Do",
+    "tags": ["Bug"]
+  }
+]
