@@ -9,13 +9,17 @@ test.describe('Data Driven Tests', () => {
 
       await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
 
-      await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
+     await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
 
-await page.getByRole('textbox').first().fill('admin');
-await page.getByRole('textbox').last().fill('password123');
+// wait for page to fully load (important)
+await page.waitForLoadState('domcontentloaded');
 
-await page.getByRole('button', { name: /login|sign in/i }).click();
+// more flexible selectors (DO NOT use name attributes)
+await page.locator('input').first().fill('admin');
+await page.locator('input').nth(1).fill('password123');
 
+// click first visible button (login/submit/sign in)
+await page.locator('button:visible').first().click();
       await page.click(`text=${data.board}`);
 
       const column = page.locator(`text=${data.column}`).locator('..');
