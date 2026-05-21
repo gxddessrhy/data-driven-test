@@ -1,6 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const testCases = require('./testCases.json');
 
+console.log("USING LATEST VERSION");
+
 test.describe('Data Driven Tests', () => {
 
   for (const data of testCases) {
