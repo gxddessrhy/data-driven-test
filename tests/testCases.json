@@ -12,5 +12,33 @@
     "task": "Fix navigation bug",
     "column": "To Do",
     "tags": ["Bug"]
+  },
+  {
+    "name": "Test Case 3",
+    "board": "Web Application",
+    "task": "Design system updates",
+    "column": "In Progress",
+    "tags": ["Design"]
+  },
+  {
+    "name": "Test Case 4",
+    "board": "Mobile Application",
+    "task": "Push notification system",
+    "column": "To Do",
+    "tags": ["Feature"]
+  },
+  {
+    "name": "Test Case 5",
+    "board": "Mobile Application",
+    "task": "Offline mode",
+    "column": "In Progress",
+    "tags": ["Feature", "High Priority"]
+  },
+  {
+    "name": "Test Case 6",
+    "board": "Mobile Application",
+    "task": "App icon design",
+    "column": "Done",
+    "tags": ["Design"]
   }
 ]
