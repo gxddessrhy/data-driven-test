@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const testCases = require('./testCases.json');
 
-test.describe('Demo App Tests', () => {
+test.describe('Data Driven Tests', () => {
 
   for (const data of testCases) {
 
